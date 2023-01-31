@@ -1,7 +1,8 @@
 :root{
-    --dark-blue: hsl(225, 17%, 14%);
+    --dark-blue: hsl(223, 16%, 9%);
     --med-blue: #161E37;
     --off-grey: rgb(99, 99, 99);
+    --dark-grey: rgb(57, 56, 56);
 }
 
 
@@ -22,13 +23,13 @@ body {
 }
 
 .container {
-    width: 600px
+    width: 500px
 }
 
 .splash {
     height: 100vh;
     width: inherit;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .overlay {
@@ -42,7 +43,7 @@ body {
 
 .rightSplash {
     background-color: black;
-    min-width: 700px;
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     color: white;
@@ -56,6 +57,7 @@ body {
     font-size: 1.5rem;
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 50px;
 }
 
 .item2 {
@@ -64,17 +66,51 @@ body {
 
 .formPar {
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: auto auto;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: auto auto auto auto;
     row-gap: 10px;
     column-gap: 20px;
 }
 
 .item3 {
     flex-grow: 1;
+    font-size: 1.2rem;
 }
 
 .grid {
-    background-color: white;
-    border: 3px solid var(--off-grey);
+    background-color: black;
+    color:rgb(181, 179, 179);
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid var(--off-grey);
+    height: 35px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding-left: 6px;
+}
+
+input:hover {
+    border: 2px solid white;
+}
+
+.input:placeholder-shown {
+    border-color: var(--off-grey);
+}
+
+input:invalid {
+    border-color: rgb(91, 0, 0);
+}
+
+input:valid {
+    border-color: white;
+}
+
+.input:placeholder-shown.input:hover {
+    border-color: white;
 }
